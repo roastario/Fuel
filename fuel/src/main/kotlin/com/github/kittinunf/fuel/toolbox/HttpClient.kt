@@ -14,7 +14,6 @@ import java.net.Proxy
 import java.net.URLConnection
 import java.util.zip.GZIPInputStream
 import javax.net.ssl.HttpsURLConnection
-import kotlin.coroutines.experimental.suspendCoroutine
 
 internal class HttpClient(private val proxy: Proxy? = null) : Client {
     override fun executeRequest(request: Request): Response {
@@ -29,7 +28,7 @@ internal class HttpClient(private val proxy: Proxy? = null) : Client {
         }
     }
 
-    override suspend fun awaitRequest(request: Request): Response = suspendCoroutine { continuation ->
+    override suspend fun awaitRequest(request: Request): Response =  suspendCoroutine { continuation ->
         try {
             continuation.resume(doRequest(request))
         } catch (exception: Exception) {
