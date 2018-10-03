@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins { java
-    kotlin("jvm") version "1.3.0-rc-116"
+    kotlin("jvm")
 }
 
 dependencies {

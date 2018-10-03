@@ -17,6 +17,10 @@ repositories {
     maven { setUrl("http://dl.bintray.com/kotlin/kotlin-eap") }
     mavenCentral()
 }
+
+pluginManager{
+
+}
 val compileKotlin: KotlinCompile<KotlinJvmOptions> by tasks
 compileKotlin.kotlinOptions {
     jvmTarget = "1.8"
