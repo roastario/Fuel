@@ -1,4 +1,3 @@
-import com.android.build.gradle.BaseExtension
 import org.jetbrains.kotlin.gradle.dsl.Coroutines
 import org.jetbrains.kotlin.gradle.dsl.KotlinProjectExtension
 
@@ -14,11 +13,11 @@ dependencies {
     implementation(Dependencies.kotlinCoroutinesAndroid)
     implementation(Dependencies.rxJavaAndroid)
 
-    api(project(":fuel-rxjava"))
-    api(project(":fuel-android"))
-    api(project(":fuel-livedata"))
-    api(project(":fuel-gson"))
-    api(project(":fuel-coroutines"))
+    apiElements(project(":fuel-rxjava"))
+    apiElements(project(":fuel-android"))
+    apiElements(project(":fuel-livedata"))
+    apiElements(project(":fuel-gson"))
+    apiElements(project(":fuel-coroutines"))
 
     androidTestImplementation(Dependencies.androidAnnotation)
     androidTestImplementation(Dependencies.androidTestRunner)

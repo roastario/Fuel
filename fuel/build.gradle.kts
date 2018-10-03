@@ -1,7 +1,10 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-plugins { java
-    kotlin("jvm") version "1.3.0-rc-116"
+import org.jetbrains.kotlin.gradle.dsl.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+
+plugins {
+    java
+    kotlin("jvm")
 }
 
 dependencies {
@@ -14,11 +17,11 @@ repositories {
     maven { setUrl("http://dl.bintray.com/kotlin/kotlin-eap") }
     mavenCentral()
 }
-val compileKotlin: KotlinCompile by tasks
+val compileKotlin: KotlinCompile<KotlinJvmOptions> by tasks
 compileKotlin.kotlinOptions {
     jvmTarget = "1.8"
 }
-val compileTestKotlin: KotlinCompile by tasks
+val compileTestKotlin: KotlinCompile<KotlinJvmOptions> by tasks
 compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
 }

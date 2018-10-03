@@ -3,7 +3,7 @@ object Versions {
     const val publishVersion = "1.15.0"
 
     // Core dependencies
-    const val kotlinVersion = "1.3-M2"
+    const val kotlinVersion = "1.3.0-rc-116"
     const val resultVersion = "1.5.0"
     const val jsonVersion = "20170516"
 

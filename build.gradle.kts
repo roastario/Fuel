@@ -8,8 +8,6 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    var kotlin_version: String by extra
-    kotlin_version = "1.3.0-rc-116"
     repositories {
         mavenCentral()
         jcenter()
@@ -23,7 +21,6 @@ buildscript {
         classpath(Plugins.jacocoAndroid)
         classpath(Plugins.bintray)
         classpath(kotlin("gradle-plugin", version = Versions.kotlinVersion))
-        classpath(kotlinModule("gradle-plugin", kotlin_version))
     }
 }
 

@@ -4,7 +4,6 @@ import com.github.kittinunf.fuel.core.FuelError
 import com.github.kittinunf.fuel.core.Response
 import com.github.kittinunf.result.Result
 
-
 internal class AsyncTaskRequest(private val task: TaskRequest) : TaskRequest(task.request) {
     var successCallback: ((Response) -> Unit)? = null
     var failureCallback: ((FuelError, Response) -> Unit)? = null
@@ -25,4 +24,3 @@ internal class AsyncTaskRequest(private val task: TaskRequest) : TaskRequest(tas
 
     private fun errorResponse() = Response(request.url)
 }
-
